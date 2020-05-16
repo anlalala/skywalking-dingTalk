@@ -34,7 +34,7 @@ public class AlarmController {
     private String secret = "密钥，机器人安全设置页面，加签一栏下面显示的SEC开头的字符串";
 
 
-    private String webhook = "https://oapi.dingtalk.com/robot/send?access_token=50bf8cdef4c68e3706307dedd9dba09d559da74b32324a26b8582dc5bb117785";
+    private String webhook = "钉钉回调地址";
 
 
     @RequestMapping(value = "/pushData", method = RequestMethod.POST)
