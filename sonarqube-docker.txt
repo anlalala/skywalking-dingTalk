@@ -1,0 +1,12 @@
+docker run --name sonarqube -d \
+   	-p 9002:9000 -p 9092:9092 \
+	-e SONARQUBE_JDBC_USERNAME=root \
+	-e SONARQUBE_JDBC_PASSWORD=123456 \
+	-e SONARQUBE_JDBC_URL="jdbc:mysql://172.16.2.111:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance" \
+	-v /opt/software/sonarqube/conf:/opt/software/sonarqube/conf \
+	-v /opt/software/sonarqube/data:/opt/software/sonarqube/data \
+	-v /opt/software/sonarqube/logs:/opt/software/sonarqube/logs \
+	-v /opt/software/sonarqube/extensions:/opt/software/sonarqube/extensions \
+	sonarqube:6.7.4
+
+token: 9ec5f1376c8b8346220128ea8144574c8ade220f
